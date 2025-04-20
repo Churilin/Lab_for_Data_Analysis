@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <PlatformTarget>x64</PlatformTarget>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.ML" Version="4.0.0" />
+    <PackageReference Include="Microsoft.ML.TorchSharp" Version="0.22.0" />
+    <PackageReference Include="TorchSharp-cpu" Version="0.102.7" />
+  </ItemGroup>
+  <ItemGroup Label="SpamDetector">
+    <None Include="SpamDetector.mlnet">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+</Project>
